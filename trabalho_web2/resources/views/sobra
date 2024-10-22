@@ -1,0 +1,25 @@
+<td>
+                                    <a href='{{ route('NovoLogin', ['id' => $linha->id]) }}' class='btn btn-success'>
+                                        <li class='fa fa-pencil'></li>
+                                    </a>
+                                    |
+                                    <a href='{{ route('categoria_ex', ['id' => $linha->id]) }}' class='btn btn-danger'>
+                                        <li class='fa fa-trash'></li>
+                                    </a>
+                                </td>
+
+
+
+
+                                @extends('admin_layout.index')
+
+@section('admin_template')
+
+
+
+
+<div class="col-md-4">
+    <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Novo
+    </a>
+</div>
