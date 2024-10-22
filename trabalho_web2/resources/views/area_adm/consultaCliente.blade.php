@@ -4,7 +4,7 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Clientes cadastrado</h1>
         <ol class="breadcrumb mb-4">
-            
+
         </ol>
 
         <div class="card mb-4">
@@ -35,7 +35,8 @@
                                 <td>
                                     <a href='{{ route('ClienteExcluir', ['id' => $linha->id]) }}' class='btn btn-danger'>
                                         <li class='fa fa-trash'></li>
-                                    </a></td>
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

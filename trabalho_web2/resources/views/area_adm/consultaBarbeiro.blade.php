@@ -4,7 +4,7 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Clientes cadastrado</h1>
         <ol class="breadcrumb mb-4">
-            
+
         </ol>
 
         <div class="card mb-4">
@@ -33,10 +33,12 @@
                                 <td>{{ $linha->nome }}</td>
                                 <td>{{ $linha->especialidade }}</td>
                                 <td>
-                                    <a href='{{ route('exBarbeiro', ['id' => $linha->id_barbeiro]) }}' class='btn btn-danger'>
+                                    <a href='{{ route('exBarbeiro', ['id' => $linha->id_barbeiro]) }}'
+                                        class='btn btn-danger'>
                                         <li class='fa fa-trash'></li>
-                                    </a></td>
-                                
+                                    </a>
+                                </td>
+
                             </tr>
                         @endforeach
                     </tbody>
