@@ -11,9 +11,8 @@ class CreatePlanosTable extends Migration
     {
         Schema::create('planos', function (Blueprint $table) {
             $table->id('id_plano');
-            $table->enum('plano', ['max', 'base', 'plus']);
-            $table->unsignedBigInteger('id_login');
-            $table->foreign('id_login')->references('id')->on('login')->onDelete('cascade');
+            $table->enum('plano', ['base', 'base++', 'max', 'plus']);
+            $table->double('valor', 8, 2);
         });
     }
 

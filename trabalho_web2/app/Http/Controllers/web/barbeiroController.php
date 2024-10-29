@@ -10,7 +10,6 @@ class barbeiroController extends Controller
 {
     public function barbeiroNovo(Request $request) 
     {
-        //$_POST['cat_nome']
         $nome = $request->input("usuario");
         $especialidade = $request->input("especialidade");
 
@@ -21,8 +20,6 @@ class barbeiroController extends Controller
 
         return redirect('/barbeiro/consulta');
 
-        //INSERT INTO categoria (id, cat_nome, cat_descricao)
-        // VALUES ( ???, 'VALOR', 'DESCRICAO')
     }
 
     public function novoB()
@@ -38,8 +35,7 @@ class barbeiroController extends Controller
     }
 
     public function excluirBarbeiro($id)
-    {
-        //SELECT * FROM categoria WHERE id = ID        
+    {     
         $barbeiros = barbeiro::where("id_barbeiro", $id)->first();
         $barbeiros->delete();
 

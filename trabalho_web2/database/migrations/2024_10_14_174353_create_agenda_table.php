@@ -13,8 +13,6 @@ class CreateAgendaTable extends Migration
             $table->id();
             $table->time('hora_marcada');
             $table->date('dt_marcada');
-            $table->unsignedBigInteger('id_login');
-            $table->foreign('id_login')->references('id')->on('login')->onDelete('cascade');
         });
     }
 

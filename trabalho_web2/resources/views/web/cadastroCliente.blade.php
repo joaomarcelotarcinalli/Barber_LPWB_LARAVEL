@@ -1,17 +1,19 @@
-@extends('area_adm.dashboard')
-@section('admin_template')
-    <link rel= "icon" href = "img/Imagens/logo2Novo.png">
-    <div class="container-fluid px-4">
-        <h1 class="mt-4">Novo Cliente</h1>
-        <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">Cadastro de novo cliente</li>
-        </ol>
-        <div class="main">
+<!DOCTYPE html>
+<html lang="en">
 
-            <div class="container">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/loginAdm.css">
+    <title>Login ADM</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+</head>
+
+<body>
+    <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <form class="login" action="{{route('clieCadDashboard')}}" method="POST">
+                <form class="login" action="/cad/cli" method="POST">
+                <h1 style = "font-family: arial; margin-top: -20%; font-size: 38px">Cadastro</h1>
                 @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <ul>
@@ -39,9 +41,10 @@
                         <i class="login__icon fas fa-lock"></i>
                         <input type="password" name="password_confirmation" class="login__input" placeholder="confirme a senha" required>
                     </div>
-                    <br>
-                    <button type="submit" style= "border-radius: 15px; padding: 7px">
+                    <a style = "text-decoration: none; color: black;"href = "/login">Já possui conta?</a>
+                    <button type="submit" class="button login__submit">
                         <span class="button__text">Cadastrar</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
                     </button>
                 </form>
             </div>
@@ -53,12 +56,6 @@
             </div>
         </div>
     </div>
+</body>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    </div>
-                </div>
-            </div>
-        @endsection
+</html>

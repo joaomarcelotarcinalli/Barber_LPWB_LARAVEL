@@ -7,16 +7,14 @@
             <li class="breadcrumb-item active">Cadastro de novo barbeiro</li>
         </ol>
         <div class="main">
-            <input type="checkbox" id="chk" aria-hidden="true">
 
             <div class="signup">
                 <form action= "{{ route('novoBarbeiro') }}" method= "POST">
                     @csrf
-                    <label for="chk" aria-hidden="true">Retrovisor</label>
                     <input style= "border-radius: 13px" type="text" name="usuario" placeholder="Nome" required="">
-                    <input style= "border-radius: 13px" type="password" name="especialidade" placeholder="Especialidade"
+                    <input style= "border-radius: 13px" type="text" name="especialidade" placeholder="Especialidade"
                         required="">
-                    <button>SIGN</button>
+                    <button>cadastrar</button>
                 </form>
             </div>
 

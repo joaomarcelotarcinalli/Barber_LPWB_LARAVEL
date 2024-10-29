@@ -54,15 +54,9 @@
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <div class="menu-main d-flex align-items-center justify-content-end">
                                 <!-- Main-menu -->
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="">Home</a></li>
-                                            <li><a href="planos#services">Serviços</a></li>
-                                    </nav>
-                                </div>
+                                
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="{{ route('login') }}" class="btn header-btn">entre ou cadastrese</a>
+                                    <a href="/registrar" class="btn header-btn">entre ou cadastre-se</a>
                                 </div>
                             </div>
                         </div>
@@ -304,6 +298,7 @@
                                         <li><a href="#"> Contato</a></li>
                                         <li><a href="#">Dúvidas</a></li>
                                         <li><a href="#">Reclamações</a></li>
+                                        <li><a style = "text-decoration: none;" href = "/login/adm">Área do Administrador</a><li>
                                     </ul>
                                 </div>
                             </div>
@@ -335,7 +330,7 @@
                                             document.write(new Date().getFullYear());
                                         </script> All rights reserved | This template is made with <i
                                             class="fa fa-heart" aria-hidden="true"></i> by <a
-                                            href="https://colorlib.com" target="_blank">JotinhaPsico</a>
+                                            href="/#" target="_blank">JotinhaPsico</a>
                                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     </p>
                                 </div>

@@ -41,13 +41,33 @@ class PageController extends Controller
         return view('web.hora');
     }
 
-    public function loginAdm()
+    public function loginAreaAdm()
     {
-        return view('web.loginAdm');
+        return view('area_adm.loginAdm');
     }
 
     public function logadoCli()
     {
         return view('web.clienteLogado');
     }
-};
+
+    public function registraCliente()
+    {
+        return view('web.cadastroCliente');
+    }
+
+    public function marcarHora()
+    {
+        return view('web.marcarHora');
+    }
+
+    public function clienteLogin()
+    {
+        return view('web.clienteLogado');
+    }
+
+    public function horaMarcada()
+    {
+        return view('web.horaMarcada');
+    }
+}

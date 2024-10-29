@@ -1,0 +1,30 @@
+CONTA COMPRADOR
+
+TESTUSER856352155
+
+OTQcxIWmRW
+
+
+Mastercard
+5031 4332 1540 6351
+123
+11/25
+
+Visa
+4235 6477 2802 5682
+123
+11/25
+
+American Express
+3753 651535 56885
+1234
+11/25
+
+
+APRO
+Pagamento aprovado
+(CPF) 12345678909
+
+OTHE
+Recusado por erro geral
+(CPF) 12345678909

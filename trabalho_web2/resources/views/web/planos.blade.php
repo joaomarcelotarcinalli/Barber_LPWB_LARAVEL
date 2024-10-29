@@ -44,6 +44,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#price">Planos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Login: {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href = "{{route('logoutCliente')}}"class="nav-link">Sair<span class="sr-only">(current)</span></a>
+                    </li>
                 </ul>
             </div>
             <ul class="navbar-nav ml-auto search-box">
@@ -123,43 +129,52 @@
         <div class="container text-white">
             <div class="head-box text-center mb-5">
                 <h2 class="font-abril">Planos e Valores</h2>
-                <h5 class="arial">Escolha o que mais te agrada e clique para cadastrar-se</h5>
+                <h5 class="arial">Escolha o que mais te agrada e clique para assinar</h5>
             </div>
             <div class="three-panel-block my-4">
-                <a style ="color: white; text-decoration: none;" href="{{ route('login') }}">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
-                            <div class="service-block-bg text-center p-3">
-                                <div class="price-count font-abril"><span>R$</span>79,90</div>
-                                <h3>Plano Base</h3>
-                                <p class="px-4">3 cortes de cabelo no período do plano</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 pr-md-5 mb-4">
-                            <div class="service-block-bg text-center p-3">
-                                <div class="price-count font-abril"><span>R$</span>99,90</div>
-                                <h3> Plano Base++</h3>
-                                <p class="px-4">Cortes ilimitados no perído do plano</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
-                            <div class="service-block-bg text-center p-3">
-                                <div class="price-count font-abril"><span>R$</span>129,90</div>
-                                <h3>Plano Max </h3>
-                                <p class="px-4">Cortes ilimitados e 2 barbas no período do plano</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 pr-md-5">
-                            <div class="service-block-bg text-center p-3">
-                                <div class="price-count font-abril"><span>R$</span>169,90</div>
-                                <h3>Plano Plus</h3>
-                                <p class="px-4">Cortes e barbas ilimitados no período do plano</p>
-                            </div>
-                        </div>
-                    </div>
-            </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
+            <a style="color: white; text-decoration: none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849295664c0192d8b7aeb51424">
+                <div class="service-block-bg text-center p-3">
+                    <div class="price-count font-abril"><span>R$</span>79,90</div>
+                    <h3>Plano Base</h3>
+                    <p class="px-4">3 cortes de cabelo no período do plano</p>
+                </div>
+            </a>
         </div>
-        </a>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 pr-md-5 mb-4">
+            <a style="color: white; text-decoration: none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849295664c0192d8b8cde11425">
+                <div class="service-block-bg text-center p-3">
+                    <div class="price-count font-abril"><span>R$</span>99,90</div>
+                    <h3>Plano Base++</h3>
+                    <p class="px-4">Cortes ilimitados no período do plano</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 pl-md-5 mb-4">
+            <a style="color: white; text-decoration: none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c938084929566050192d8b9fd321488">
+                <div class="service-block-bg text-center p-3">
+                    <div class="price-count font-abril"><span>R$</span>129,90</div>
+                    <h3>Plano Max</h3>
+                    <p class="px-4">Cortes ilimitados e 2 barbas no período do plano</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 pr-md-5">
+            <a style="color: white; text-decoration: none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c938084929566050192d8badef1148a">
+                <div class="service-block-bg text-center p-3">
+                    <div class="price-count font-abril"><span>R$</span>169,90</div>
+                    <h3>Plano Plus</h3>
+                    <p class="px-4">Cortes e barbas ilimitados no período do plano</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
     </section>
 
     <!-- footer Block -->
@@ -168,7 +183,7 @@
             &copy; <a href="" target="_blank">Retrovisor</a> <span id="year"></span>. Copyright. Criado
             por J
             <br>
-            <a style = "text-decoration: none;" href = "{{ route('pagamento') }}">Área do Administrador</a>
+            
         </div>
 
     </div>
