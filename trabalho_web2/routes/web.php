@@ -38,14 +38,15 @@ Route::middleware('auth.check')->group(function () {
     
     Route::get('/hora/marcada', [PageController::class, 'horaMarcada'])->name('horaMarcada');
 });
-
-// Rotas para administradores
-Route::middleware('auth.adm')->group(function () {
-    Route::get('/cliente/excluir/{id}', [bdController::class, 'excluirUser'])->name('ClienteExcluir');
-    Route::post('/cad', [bdController::class, 'cadClienteDashboard'])->name('clieCadDashboard');
+Route::get('/cliente/excluir/{id}', [bdController::class, 'excluirUser'])->name('ClienteExcluir');
+Route::post('/cad', [bdController::class, 'cadClienteDashboard'])->name('clieCadDashboard');
     Route::get('/barbeiros', [barbeiroController::class, 'novoB'])->name('novoB');
     Route::get('/barbeiro/consulta', [barbeiroController::class, 'consultaB'])->name('consultaBarbeiro');
     Route::get('/barbeiro/excluir/{id}', [barbeiroController::class, 'excluirBarbeiro'])->name('exBarbeiro');
     Route::match(['get', 'post'], '/barbeiro/novo', [barbeiroController::class, 'barbeiroNovo'])->name('novoBarbeiro');
+// Rotas para administradores
+Route::middleware('auth.adm')->group(function () {
+    
+    
     Route::match(['get', 'post'], '/adm', [PageController::class, 'adm'])->name('adm');
 });
